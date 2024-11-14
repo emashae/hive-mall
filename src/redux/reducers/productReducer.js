@@ -7,8 +7,8 @@ const initialState = {
         category: "BBB"
     }]
 }
-export const productReducer = (state, {type, payload}) => {
-    switch (action.type) {
+export const productReducer = (state = initialState, {type, payload}) => {
+    switch (type) {
         case ActionTypes.SET_PRODUCTS:
             return state;
     
