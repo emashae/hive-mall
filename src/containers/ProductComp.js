@@ -1,23 +1,22 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductComp = () => {
     const products = useSelector((state) => state.allProducts.products);
+
     const renderList = products.map((product) => {
         const { id, title, image, price, category } = product;
         return (
-            <div className='four column wide' key={id}>
-                <Link to={`/product/${id}`}>
-                    <div className='ui link cards'>
-                        <div className='card'>
-                            <div className='image'>
-                                <img src={image} alt={title} />
-                            </div>
-                            <div className='content'></div>
-                            <div className='header'>{title}</div>
-                            <div className='meta price'>$ {price}</div>
-                            <div className='meta'>{category}</div>
+            <div className="col-md-3 mb-4" key={id}>
+                <Link to={`/product/${id}`} style={{ textDecoration: 'none' }}>
+                    <div className="card h-100">
+                        <img src={image} className="card-img-top p-3" alt={title} />
+                        <div className="card-body">
+                            <h5 className="card-title text-dark">{title}</h5>
+                            <p className="card-text text-muted">{category}</p>
+                            <p className="card-text text-primary">$ {price}</p>
                         </div>
                     </div>
                 </Link>
@@ -25,7 +24,7 @@ const ProductComp = () => {
         );
     });
 
-    return <>{renderList}</>
-}
+    return <div className="row">{renderList}</div>;
+};
 
-export default ProductComp
+export default ProductComp;
