@@ -22,18 +22,14 @@ HiveMall is a simple React-based product store where users can view product deta
 ### Prerequisites
 
 - Node.js installed on your machine.
-- A GitHub account to host the project on GitHub Pages.
 
 ### Getting Started Locally
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/<your-username>/<your-repository-name>.git
    ```
-
-```
-
-```
 
 2. Navigate into the project folder:
 
