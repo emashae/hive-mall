@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hive-mall/static/css/main.fc9f8d1d.css",
+    "main.js": "/hive-mall/static/js/main.6309e833.js",
+    "static/media/logo.png": "/hive-mall/static/media/logo.4e458cc05b4a86d1e5d7.png",
+    "static/media/gifts.jpg": "/hive-mall/static/media/gifts.84689307d383624f2a02.jpg",
+    "index.html": "/hive-mall/index.html",
+    "main.fc9f8d1d.css.map": "/hive-mall/static/css/main.fc9f8d1d.css.map",
+    "main.6309e833.js.map": "/hive-mall/static/js/main.6309e833.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc9f8d1d.css",
+    "static/js/main.6309e833.js"
+  ]
+}
