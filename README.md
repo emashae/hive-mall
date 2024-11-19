@@ -55,27 +55,6 @@ HiveMall is a simple React-based product store where users can view product deta
 
 5. Open your browser and go to `http://localhost:3000` to view the app locally.
 
-### Deployment to GitHub Pages
-
-To deploy the app to GitHub Pages:
-
-1. Set the `homepage` in the `package.json` file:
-
-   ```json
-   "homepage": "https://<your-username>.github.io/<your-repository-name>"
-   ```
-
-2. Deploy the app:
-   ```bash
-   npm run deploy
-   ```
-
-This will automatically build the app and push it to the `gh-pages` branch. After the deployment is complete, you can access the live site at:
-
-```bash
-https://<your-username>.github.io/<your-repository-name>
-```
-
 ## Folder Structure
 
 - `public/`: Contains the `index.html` file and other static assets.
