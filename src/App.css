@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Pacifico&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand span {
+  font-family: 'Pacifico', cursive;
+}
+
 /* Hero Section */
 .hero-section {
-  background: url('https://source.unsplash.com/1600x900/?fashion,shopping') no-repeat center center;
+  background: url('../src/assets/images/gifts.jpg') no-repeat center center;
   background-size: cover;
-  height: 60vh;
+  height: 100vh; 
   position: relative;
 }
 
 .hero-section .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   height: 100%;
   width: 100%;
   position: absolute;
@@ -16,11 +26,16 @@
 
 .hero-section .hero-content {
   z-index: 1;
+  position: relative;
   padding: 20px;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero-section h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -30,6 +45,47 @@
   font-weight: 500;
   margin-top: 20px;
 }
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 75%);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.8); /* Solid background after scrolling */
+}
+
+.love-icon {
+  cursor: pointer;
+  z-index: 10;
+}
+
+.product-card {
+  position: relative;
+}
+
+.product-image {
+  object-fit: cover;
+  height: 200px;
+}
+
+
+footer .social-icons a:hover {
+  color: #00aced; /* Twitter blue */
+  transform: scale(1.1); /* Slight scale-up effect */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
 
 /* Product Cards */
 .product-listing .card {
@@ -78,10 +134,29 @@
   background-color: #0056b3;
 }
 
+/* Keyframe for heart pop animation */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Class for the pop animation */
+.heart-pop {
+  animation: pop 0.3s ease;
+}
+
+
 /* Responsive Grid */
 @media (max-width: 768px) {
   .hero-section h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-section p {
