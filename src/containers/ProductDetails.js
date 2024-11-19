@@ -50,20 +50,39 @@ const ProductDetails = () => {
                     {/* Product Image */}
                     <div className="col-lg-6">
                         <div className="image-container mb-4">
-                            <img src={image} className="card-img-top product-image" alt={title} loading="lazy" />
+                            <img
+                                src={image}
+                                className="card-img-top product-image"
+                                alt={title}
+                                loading="lazy"
+                                style={{
+                                    objectFit: 'contain',
+                                    maxHeight: '400px',
+                                    width: '100%',
+                                    margin: '0 auto',
+                                    borderRadius: '10px',
+                                    transition: 'transform 0.3s ease',
+                                }}
+                            />
                         </div>
                     </div>
                     <div className="col-lg-6 mt-4 mt-lg-0">
-                        <h1>{title}</h1>
-                        <h2>${price}</h2>
-                        <p>{description}</p>
+                        <h1 className="product-title mb-3">{title}</h1>
+                        <h2 className="product-price mb-3">${price}</h2>
+                        <p className="product-description text-muted mb-4" style={{ fontSize: '1.1rem' }}>{description}</p>
+                        
+                        {/* Add to Cart and Buy Now Buttons */}
+                        <div className="d-flex gap-3">
+                            <button className="btn btn-outline-info btn-lg" style={{ width: '45%' }}>Add to Cart</button>
+                            <button className="btn btn-info btn-lg" style={{ width: '45%' }}>Buy Now</button>
+                        </div>
                     </div>
                 </div>
             )}
 
             {/* Related Products Section */}
             <div className="container my-5">
-                <h3 className="mb-4">Related Products</h3>
+                <h3 className="mb-4 text-center">Related Products</h3>
                 <div className="row">
                     {relatedProducts.map((relatedProduct) => (
                         <ProductCard
