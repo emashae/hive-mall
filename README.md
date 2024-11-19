@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# HiveMall - React Product Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HiveMall is a simple React-based product store where users can view product details and browse related products. The project is deployed on GitHub Pages, showcasing the capabilities of React, Redux, Axios, and routing with React Router.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- View product details (Title, Price, Description, and Image).
+- Browse related products based on the selected product's category.
+- "Add to Cart" and "Buy Now" buttons for each product (future implementation).
+- Responsive design for better usability on mobile and desktop devices.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: JavaScript library for building user interfaces.
+- **Redux**: State management for handling global state (product details, related products).
+- **Axios**: Promise-based HTTP client for making API requests.
+- **React Router**: For navigation and routing between different views.
+- **Bootstrap**: For responsive design and styling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js installed on your machine.
+- A GitHub account to host the project on GitHub Pages.
 
-### `npm run build`
+### Getting Started Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/<your-repository-name>.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+2. Navigate into the project folder:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   cd <your-repository-name>
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install the dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Run the development server:
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open your browser and go to `http://localhost:3000` to view the app locally.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Deployment to GitHub Pages
 
-### Code Splitting
+To deploy the app to GitHub Pages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Set the `homepage` in the `package.json` file:
 
-### Analyzing the Bundle Size
+   ```json
+   "homepage": "https://<your-username>.github.io/<your-repository-name>"
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Deploy the app:
+   ```bash
+   npm run deploy
+   ```
 
-### Making a Progressive Web App
+This will automatically build the app and push it to the `gh-pages` branch. After the deployment is complete, you can access the live site at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+https://<your-username>.github.io/<your-repository-name>
+```
 
-### Advanced Configuration
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `public/`: Contains the `index.html` file and other static assets.
+- `src/`: Contains the main React components, styles, and Redux setup.
+  - `components/`: Contains React components such as `ProductCard`, `ProductDetails`.
+  - `redux/`: Contains Redux actions and reducers.
+  - `App.js`: The main app component that handles routing.
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Feel free to fork this project and submit pull requests for improvements, bug fixes, or new features.
 
-### `npm run build` fails to minify
+### Steps to contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
