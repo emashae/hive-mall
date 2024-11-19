@@ -8,12 +8,12 @@ const ProductListing = () => {
     const dispatch = useDispatch();
 
     const fetchProducts = async () => {
-        const response = await axios
-            .get("https://fakestoreapi.com/products")
-            .catch((err) => {
-                console.log("Error: ", err);
-            });
-        dispatch(setProducts(response.data));
+        try {
+            const response = await axios.get("https://fakestoreapi.com/products");
+            dispatch(setProducts(response.data));
+        } catch (err) {
+            console.error("Error fetching products:", err);
+        }
     };
 
     useEffect(() => {
@@ -21,8 +21,18 @@ const ProductListing = () => {
     }, []);
 
     return (
-        <div className="container my-5">
-            <ProductComp />
+        <div className="product-listing">
+            <div className="hero-section">
+                <div className="overlay">
+                    <h1 className="display-4 fw-bold text-white text-center">Discover Your Style</h1>
+                    <p className="lead text-white text-center">
+                        Shop the latest trends with ease.
+                    </p>
+                </div>
+            </div>
+            <div className="container my-5">
+                <ProductComp />
+            </div>
         </div>
     );
 };

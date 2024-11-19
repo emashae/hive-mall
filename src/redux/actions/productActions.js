@@ -13,3 +13,10 @@ export const selectedProduct = (product) => {
         payload: product
     };
 };
+
+export const setRelatedProducts = (relatedProducts) => {
+    return {
+        type: ActionTypes.SET_RELATED_PRODUCTS,
+        payload: relatedProducts
+    };
+};
